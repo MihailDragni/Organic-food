@@ -407,15 +407,77 @@
 
   &__link {
     display: block;
+    width: 16px;
+    height: 40px;
     margin: 0 auto;
-    mask-image: url('../images/sprite.svg#arrow-right');
-    background-color: $green;
-    mask-size: cover;
-    mask-repeat: no-repeat;
-    mask-position: center;
-    width: 32px;
-    height: 16px;
-    transform: rotate(90deg);
+    position: relative;
+    &::before {
+      content: '';
+      mask-image: url('../images/sprite.svg#arrow-down');
+      background-color: $green;
+      mask-size: cover;
+      mask-repeat: no-repeat;
+      mask-position: center;
+      width: 16px;
+      height: 33px;
+      position: absolute;
+    }
+  }
+
+  &__bg {
+    background-image: url('../images/content/man.png');
+    align-self: flex-end;
+    background-repeat: no-repeat;
+    background-position: center top;
+    position: relative;
+    z-index: 10;
+    width: 600px;
+    height: 600px;
+    &::before {
+      content: '';
+      width: 420px;
+      height: 420px;
+      border-radius: 50%;
+      background-color: $green;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+      z-index: -2;
+    }
+
+    &::after {
+      content: '';
+      background-image: url('../images/content/ellipse.svg');
+      background-repeat: no-repeat;
+      background-position: right;
+      width: 600px;
+      height: 600px;
+      position: absolute;
+      right: 0;
+      z-index: -1;
+    }
+  }
+
+  &__line1,
+  &__line2 {
+    width: 38px;
+    height: 420px;
+    background-color: $white;
+    transform: rotate(-135deg);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: 5;
+  }
+
+  &__line2 {
+    transform: rotate(-45deg);
   }
 }
 
