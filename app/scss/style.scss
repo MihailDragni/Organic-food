@@ -214,39 +214,7 @@
   }
 
   &__link {
-    display: inline-flex;
-    align-items: center;
-    height: 64px;
     margin: 0 auto;
-    color: $black-222;
-    font-weight: 500;
-    padding-right: 84px;
-    position: relative;
-
-    &::before {
-      content: '';
-      width: 64px;
-      height: 64px;
-      border-radius: 50%;
-      background-color: $green;
-      position: absolute;
-      right: 0;
-      z-index: 2;
-    }
-
-    &::after {
-      content: '';
-      mask-image: url('../images/sprite.svg#arrow-right');
-      background-color: $white;
-      mask-repeat: no-repeat;
-      mask-size: cover;
-      mask-position: center;
-      width: 32px;
-      height: 16px;
-      position: absolute;
-      right: 16px;
-      z-index: 3;
-    }
   }
 
   &__inner {
@@ -312,6 +280,7 @@
 
   &__title {
     position: relative;
+
     &::after {
       content: '';
       background-image: url('../images/content/ribbon.svg');
@@ -431,6 +400,7 @@
     margin: 0 auto;
     position: relative;
     transform: translateX(-85px);
+
     &::before {
       content: '';
       mask-image: url('../images/sprite.svg#arrow-down');
@@ -450,6 +420,7 @@
     position: relative;
     width: 600px;
     height: 600px;
+
     &::before {
       content: '';
       width: 420px;
@@ -468,7 +439,7 @@
     &::after {
       content: '';
       background-image: url('../images/content/ellipse.svg'),
-      url('../images/content/man.png');
+        url('../images/content/man.png');
       background-repeat: no-repeat;
       background-position: right, center 20px;
       width: 600px;
@@ -498,6 +469,44 @@
     transform: rotate(-45deg);
   }
 }
+
+.special-items {
+  background-color: $light-green;
+  padding: 89px 0 143px;
+
+  &__inner {
+    display: flex;
+  }
+
+  &__bg {
+    flex: 0 0 600px;
+    background-image: url('../images/content/cards.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 600px;
+    height: 600px;
+    margin-right: 50px;
+  }
+
+  &__text {
+    margin-bottom: 50px;
+    position: relative;
+    &::after {
+      content: '';
+      background-image: url('../images/content/fresh.png');
+      background-repeat: no-repeat;
+      background-position: center;
+      position: absolute;
+      width: 465px;
+      height: 397px;
+      top: 100%;
+      right: -120px;
+    }
+  }
+}
+
+
 
 .footer {
   padding: 67px 100px 118px;

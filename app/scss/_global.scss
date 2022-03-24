@@ -54,6 +54,41 @@ body {
   margin-bottom: 20px;
 }
 
+.link {
+  display: inline-flex;
+  align-items: center;
+  height: 64px;
+  color: $black-222;
+  font-weight: 500;
+  padding-right: 84px;
+  position: relative;
+
+  &::before {
+    content: '';
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background-color: $green;
+    position: absolute;
+    right: 0;
+    z-index: 2;
+  }
+
+  &::after {
+    content: '';
+    mask-image: url('../images/sprite.svg#arrow-right');
+    background-color: $white;
+    mask-repeat: no-repeat;
+    mask-size: cover;
+    mask-position: center;
+    width: 32px;
+    height: 16px;
+    position: absolute;
+    right: 16px;
+    z-index: 3;
+  }
+}
+
 // .input-hidden {
 //   width: 1px;
 //   height: 1px;
