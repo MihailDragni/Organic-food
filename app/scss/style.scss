@@ -310,12 +310,31 @@
 .about {
   padding: 140px 0 146px;
 
+  &__title {
+    position: relative;
+    &::after {
+      content: '';
+      background-image: url('../images/content/ribbon.svg');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      max-width: 944px;
+      width: 100%;
+      height: 532px;
+      position: absolute;
+      top: -170px;
+      right: -80px;
+      z-index: -2;
+    }
+  }
+
   &__inner {
     display: flex;
   }
 
   &__body {
     flex: 0 1 671px;
+    max-width: 671px;
   }
 
   &__text {
@@ -411,6 +430,7 @@
     height: 40px;
     margin: 0 auto;
     position: relative;
+    transform: translateX(-85px);
     &::before {
       content: '';
       mask-image: url('../images/sprite.svg#arrow-down');
@@ -425,12 +445,9 @@
   }
 
   &__bg {
-    background-image: url('../images/content/man.png');
+    flex: 0 0 600px;
     align-self: flex-end;
-    background-repeat: no-repeat;
-    background-position: center top;
     position: relative;
-    z-index: 10;
     width: 600px;
     height: 600px;
     &::before {
@@ -450,21 +467,22 @@
 
     &::after {
       content: '';
-      background-image: url('../images/content/ellipse.svg');
+      background-image: url('../images/content/ellipse.svg'),
+      url('../images/content/man.png');
       background-repeat: no-repeat;
-      background-position: right;
+      background-position: right, center 20px;
       width: 600px;
       height: 600px;
       position: absolute;
       right: 0;
-      z-index: -1;
+      z-index: 5;
     }
   }
 
   &__line1,
   &__line2 {
     width: 38px;
-    height: 420px;
+    height: 422px;
     background-color: $white;
     transform: rotate(-135deg);
     position: absolute;
