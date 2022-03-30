@@ -399,7 +399,7 @@
     height: 40px;
     margin: 0 auto;
     position: relative;
-    transform: translateX(-85px);
+    transform: translateX(-80px);
 
     &::before {
       content: '';
@@ -505,6 +505,131 @@
     }
   }
 }
+
+.customer-reviews {
+  padding: 96px 0 150px;
+  &__item {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__body {
+    flex: 0 1 640px;
+  }
+
+  &__title {
+    margin-bottom: 30px;
+  }
+
+  &__text {
+    max-width: 586px;
+    margin-bottom: 40px;
+  }
+
+  &__name {
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 1.2;
+    color: $black-222;
+    margin-bottom: 20px;
+  }
+
+  &__star {
+    margin-bottom: 34px;
+  }
+
+  &__image {
+    flex: 0 0 500px;
+    align-self: flex-end;
+    background-color: $light-green;
+    background-image: url('../images/content/bohemian-man.jpg');
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: 445px 445px;
+    background-blend-mode: darken;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+  }
+}
+
+.download-app {
+  padding-bottom: 140px;
+  &__inner {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__bg {
+    flex: 0 0 240px;
+    max-width: 240px;
+    height: 496px;
+    position: relative;
+    background: url('../images/content/telephone.png') center no-repeat;
+    background-size: cover;
+    &::before {
+      content: '';
+      background: url('../images/content/telephone-little.jpg') center no-repeat;
+      width: 208px;
+      height: 432px;
+      background-size: cover;
+      position: absolute;
+      z-index: -1;
+      left: -25px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+
+  &__body {
+    flex: 0 1 663px;
+  }
+
+  &__subtitle {
+    display: inline-block;
+    background-color: $light-green;
+    line-height: 1;
+    color: #333333;
+    padding: 11px 24px;
+    border-radius: 50px;
+    margin-bottom: 16px;
+  }
+
+  &__text {
+    max-width: 574px;
+    margin-bottom: 50px;
+  }
+
+  &__row {
+    display: flex;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 24px;
+    }
+  }
+
+  &__link {
+    display: block;
+    border-radius: 3px;
+    width: 104px;
+    height: 30px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    &--appstore {
+      background-image: url('../images/content/AppStore.png');
+    }
+
+    &--googleplay {
+      background-image: url('../images/content/GooglePlay.png');
+    }
+  }
+}
+
 
 
 
